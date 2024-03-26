@@ -1,0 +1,32 @@
+SOURCE CODE NOMOR 3
+
+def inputNilai():
+    nilai = int(input("Masukkan nilai: "))
+    print("Nilai yang dimasukkan adalah:", nilai)
+
+def inputNilaiBaru():
+    nilai_baru = int(input("Masukkan nilai baru: "))
+    print("Nilai baru yang dimasukkan adalah:", nilai_baru)
+
+def main():
+    print("Silakan pilih opsi:")
+    print("1. Input Nilai")
+    print("2. Input Nilai Baru")
+
+    pilihan = int(input("Masukkan pilihan Anda (1 atau 2): "))
+
+    # Memilih opsi menggunakan switch-case
+    switcher = {
+        1: inputNilai,
+        2: inputNilaiBaru
+    }
+
+    # Mendapatkan fungsi berdasarkan pilihan pengguna
+    selected_option = switcher.get(pilihan, lambda: print("Pilihan tidak valid!"))
+
+    # Menjalankan fungsi yang dipilih
+    selected_option()
+
+if __name__ == "__main__":
+    main()
+
